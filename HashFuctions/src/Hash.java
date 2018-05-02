@@ -113,3 +113,13 @@ public class Hash {
         verificarMensaje("MD5");
     }
 }
+
+/*
+    
+        --
+            Texto plano -> Hash ------> RSA (Privada de Emisor) -----                                 |--> Texto cifrado -> DES/AES -> Texto Plano --> Hash -> Digesto --        
+                            |-> MD5                                 |                                 |                                                                 |
+                                                                    |--> Texto Cifrado con firma  -----                                                 Verificar Hash1 = Hash2
+                            |-> SHA1                                |                                 |                                                                 |
+            Texto Plano -> DES/AES ----------------------------------                                 |--> Firma -> RSA (Publica Emisor) --> Digesto --------------------
+    */
